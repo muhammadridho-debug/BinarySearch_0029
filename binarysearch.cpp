@@ -71,16 +71,19 @@ void display()
 
 void binarySearch()
 {
-    cout << "\n=====================================\n";
-    cout << "        Pencarian Binary Search       \n";
-    cout << "======================================\n";
+    char ulang;
+    do
+    {
+        cout << "\n=====================================\n";
+        cout << "        Pencarian Binary Search       \n";
+        cout << "======================================\n";
 
-    cout << "Masukkan elemen yang ingin dicari: ";
-    cin >> x;
+        cout << "Masukkan elemen yang ingin dicari: ";
+        cin >> x;
 
-    int low = 0;
-    int high = npanjang - 1;
-    
+        int low = 0;
+        int high = npanjang - 1;
+
     do
     {
         int mid = (low + high) / 2;
@@ -107,4 +110,8 @@ void binarySearch()
     {
         cout << "\n[x] Elemen " << x << " tidak ditemukan dalam array.\n";
     }
+
+    cout << "\nIngin mencari lagi? (y/n): ";
+    cin >> ulang;
+    } while (ulang == 'y' || ulang == 'Y');
 }
